@@ -166,8 +166,6 @@
 
                 <div id="skills-meter">
 
-
-                    <!-- Example skills with dynamic progress bars -->
                     <div class="skill-item">
                         <div class="skill-name">HTML5</div>
                         <div class="skill-bar">
@@ -232,7 +230,6 @@
 
                     </div>
 
-                    <!-- Add more skills with dynamic progress bars as needed -->
                 </div>
             </div>
         </section>
@@ -328,7 +325,8 @@
                         src="https://s01.flagcounter.com/count2/fqjV/bg_FFFFFF/txt_000000/border_8F8F8F/columns_2/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/"
                         alt="Flag Counter"></a>
                 <h4 class="mt-5"> Link to Web Application Programming & Hacking Course</h4>
-                <a href="../waph.html" target="_blank">Click Here to Access the Course Information</a>
+                <a href="https://anjuribe.github.io/waph.html" target="_blank">Click Here to Access the Course
+                    Information</a>
                 <p id="digital-clock" class="mt-3 text-success"></p>
                 <canvas id="analog-clock" width="150" height="150"></canvas>
                 <div id="response">
@@ -399,7 +397,7 @@
                     const temperature = result.data[0].temp;
                     const city = result.data[0].city_name;
                     const country = result.data[0].country_code;
-                    const isNighttime = result.data[0].pod === "n"; // assuming "pod" indicates night or day
+                    const isNighttime = result.data[0].pod === "n";
                     const weatherIcons = {
                         "Clear": "fas fa-sun",
                         "Clouds": "fas fa-cloud",
@@ -421,7 +419,7 @@
                         "Broken clouds": "fas fa-cloud",
                         "Overcast clouds": "fas fa-cloud",
                         "Clear sky": "fas fa-sun"
-                        // Add more mappings as needed
+
                     };
 
                     const weatherIconClass = isNighttime ? weatherIcons[weatherDescription] + "-moon" : weatherIcons[weatherDescription] || "fas fa-question";
@@ -432,7 +430,6 @@
     <div class="temperature" style="color: #fff;">Temperature: ${temperature}°C</div>
     <div class="location" style="color: #fff;">Location: ${city}, ${country}</div>
 `;
-
                     $("#weather-info").html(weatherText);
 
 
@@ -448,12 +445,8 @@
                 });
         }
 
-        // Fetch and display the weather information
         getWeather();
-
-        // Refresh the weather information every 5 minutes
-        setInterval(getWeather, 300000); // 300 seconds = 5 minutes
-
+        setInterval(getWeather, 300000);
 
     </script>
     <script>
@@ -474,7 +467,6 @@
             }
             return null;
         }
-
         function displayWelcomeMessage() {
             const username = getCookie("username");
             const currentDate = new Date().toLocaleString();
@@ -512,8 +504,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-    <!-- Vue Script for Random Quote -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
@@ -559,15 +549,11 @@
                 // Fetch a quote when the app is created
                 this.fetchQuote();
 
-                // Fetch a new quote every 5 minutes
-                setInterval(this.fetchQuote, 300000);
+                // Fetch a new quote every 12 hours
+                setInterval(this.fetchQuote, 12 * 60 * 60 * 1000);
             }
         });
     </script>
-
-
-
-
 </body>
 
 </html>
