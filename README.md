@@ -82,10 +82,13 @@ At last this webpage icncludes all the additional tasks required for this projec
 
 Apart from the General Requirements, I have linked the `waph.html` file in the main page using `<a>` tag. 
 
+# Non-Technical Requirements
 Next, for the Non-technical Requirements:
 
 1. I have used an open source bootstrap template. 
 2. Included a Page tracker, i.e flag counter, which notes the visits of the page and countries where this page has been opened. 
+
+# Technical Requirements
 
 Coming to the Technical Requirements:
 
