@@ -23,3 +23,8 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+document.querySelector('img').addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    alert("Sorry, you can't download the image.");
+});
